@@ -1,0 +1,4 @@
+Flask
+newspaper3k
+transformers
+torch

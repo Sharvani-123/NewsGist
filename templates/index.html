@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Gist News Summaries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="{{ url_for('static', filename='news.png') }}" alt="Logo" class="navbar-icon">
+            <span class="navbar-text">NewsGist</span>
+        </div>
+    </nav>
+    <!-- Main Heading -->
+
+    <header class="header">
+        <h1>Summarize any <span class="highlight-news">News</span> article with <span class="highlight-news">NewsGist</span></h1>
+        <p class="sub-heading"><span class="highlight-ai">Stay informed without reading long articles.</span></p>
+    </header>
+
+    <div class="container">
+        <!-- URL Input Box -->
+        <div class="url-box">
+            <form method="post" id="summaryForm">
+                <input type="text" name="url" placeholder="Copy and paste any News article link below" required>
+                <button type="submit">Summarize</button>
+            </form>
+        </div>
+
+        <!-- Loading Text while summarizing -->
+        <div id="loading" class="loading-text" style="display:none;">Summarizing<span id="dots">...</span></div>
+
+        <!-- Quick Gist Summary Box -->
+        {% if quick_gist %}
+        <div class="quick-gist-box">
+            <h2>Quick Gist</h2>
+            <p>{{ quick_gist }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Full News Article Summary Box -->
+        {% if summary %}
+        <div class="summary-box">
+            <h2>Full News Summary</h2>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NewsGist</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('summaryForm');
+        form.addEventListener('submit', function() {
+            document.getElementById('loading').style.display = 'block';
+        });
+
+        // Dot animation
+        let dotCount = 0;
+        setInterval(function() {
+            let dots = document.getElementById('dots');
+            if (dotCount === 3) {
+                dots.innerHTML = '';
+                dotCount = 0;
+            } else {
+                dots.innerHTML += '.';
+                dotCount++;
+            }
+        }, 500);
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height:100%;
+    background: #111; /* Solid dark background */
+    color: #f1f7f2; /* Light text color */
+    text-align: center; /* Center the text */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #979292; Adjust the color as needed */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icon {
+    width: 50px; /* Adjust the size to fit your design */
+    height: 50px; /* Adjust the size to fit your design */
+    margin-right: 10px;
+}
+
+.navbar-text {
+    color: rgb(255, 255, 255);
+    font-size: 2.0rem; /* Adjust text size */
+    font-family: 'Arial', sans-serif; /* Choose your preferred font */
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 80px;
+    background: #111; /* Dark background */
+}
+
+.header h1 {
+    color: #fff; /* White for main text */
+    font-size: 2.8em;
+    margin: 0;
+}
+
+.header .highlight-news {
+    color: #32CD32; /* Lime green for "News" */
+    text-decoration: underline;
+}
+
+.header .highlight-ai {
+    color: #fff;
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+/* Container Styles */
+.container {
+    width: 55%;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    padding-bottom: 120px; /*Adjust this value as needed to avoid overlap with footer*/
+    /* padding:20px; */
+    background: #222; /* Slightly lighter dark background */
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #f0f0f0; /* Thin whitish border */
+    scroll-behavior: smooth;
+}
+
+
+/* URL Input Box Styles */
+.url-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #222;
+    border-radius: 10px;
+    /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.url-box h2 {
+    color: #f1c40f; /* Bright yellow */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Input and Button Styles */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(51, 51, 51, 0.8); /* Dark gray input field */
+    color: #f0f0f0;
+    font-size: 16px;
+}
+
+button {
+    background: linear-gradient(135deg, #32CD32, #2ecc71); /* Lime green gradient */
+    color: #fff;
+    padding: 8px 16px; /* Adjust padding for a more compact button */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Slightly smaller font size */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block; /* Ensure button size fits its content */
+    margin: 0; /* Remove any default margin if present */
+}
+button:hover {
+    background: linear-gradient(135deg, #0e7137, #288f28);
+}
+
+/* Loading Text */
+.loading-text {
+    text-align: center;
+    color: #f1c40f; /* Bright yellow */
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    color: #f0f0f0;
+    /* position:fixed; */
+    width: 100%;
+    bottom: 0;
+    left: 0; /* Ensure it spans the entire width */
+}
+html {
+    scroll-behavior: smooth;
+}
