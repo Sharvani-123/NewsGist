@@ -20,7 +20,7 @@ This is a simple web application that summarizes news articles. Users can input 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Sharvani-123/ByteSync>
 
 2. Navigate to the project directory:
    ```bash
