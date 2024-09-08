@@ -2,3 +2,4 @@ Flask
 newspaper3k
 transformers
 torch
+gunicorn==19.7.1
