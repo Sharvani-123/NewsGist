@@ -1,4 +1,4 @@
-# News Summarizer
+# NewsGist: News Summarizer Web-App
 
 This is a simple web application that summarizes news articles. Users can input a URL, and the app will provide a concise summary using a machine learning model.
 
